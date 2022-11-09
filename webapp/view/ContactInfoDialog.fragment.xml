@@ -1,0 +1,42 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+    <Dialog id="contactDialog" title="Contact Information">
+        <VBox class="sapUiSmallMargin">
+            <f:Form id="form" editable="false">
+                <f:layout>
+                    <f:ColumnLayout columnsM="1" />
+                </f:layout>
+                <f:formContainers>
+                    <f:FormContainer>
+                        <f:formElements>
+                            <f:FormElement label="Name">
+                                <f:fields>
+                                    <Text id="nameText" text="{CompanyName}" />
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement label="Contact Title">
+                                <f:fields>
+                                    <Text id="contactTitleText" text="{ContactTitle}" />
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement label="Address">
+                                <f:fields>
+                                    <Text id="addressText" text="{Address}" />
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement label="Phone">
+                                <f:fields>
+                                    <Text id="phoneText" text="{Phone}" />
+                                </f:fields>
+                            </f:FormElement>
+                        </f:formElements>
+                    </f:FormContainer>
+                </f:formContainers>
+            </f:Form>
+        </VBox>
+            <Panel id="panel2">
+                <FlexBox id="flexbox2" justifyContent="End" alignItems="End">
+                    <Button type="Negative" id="closeButton" text="{i18n>Close}" press=".closeDialog" />
+                </FlexBox>
+            </Panel>
+    </Dialog>
+</core:FragmentDefinition>
