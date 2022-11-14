@@ -10,7 +10,7 @@ sap.ui.define([
 
         return Controller.extend("stk.starterkit.controller.CustomersList", {
             onInit: function () {
-
+                
             },
             handleMessageToastPress: function(oEvent) {
                 var msg = 'This app runs with mock data';

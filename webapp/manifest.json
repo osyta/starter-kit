@@ -126,7 +126,6 @@
                         "EmployeePerformance"
                     ]
                 }
-
             ],
             "targets": {
                 "CustomersList": {
@@ -157,5 +156,9 @@
             "async": true,
             "id": "App"
         }
+    },
+    "sap.cloud": {
+        "public": true,
+        "service": "stk-starterkit"
     }
 }

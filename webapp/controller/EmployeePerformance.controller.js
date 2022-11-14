@@ -7,6 +7,9 @@ sap.ui.define([
 
         return Controller.extend("stk.StarterKit.controller.EmployeePerformance", {
             onInit: function () {
+                // var oData = this.getView().getModel().getData();
+                // debugger
+                // var employeeID = this.getView().getModel("Employees").getProperty("EmployeeID");
             },
             onMotivate: function (oEvent) {
                 var oEmployee = oEvent.getSource().getBindingContext().getObject();
@@ -16,31 +19,21 @@ sap.ui.define([
                 sap.m.URLHelper.triggerEmail(sEmail, sSubject, sBody);
             },
             onFire: function (oEvent) {
-            var oEmployee = oEvent.getSource().getBindingContext().getObject();
-            var sEmail = oEmployee.FirstName + "." + oEmployee.LastName + "@company.com";
-            var sSubject = "Horrible job!";
-            $.ajax({
-                 url: "/generate_insult.php",
-                 data: {
-                     lang: "en",
-                     type: "json"
-                 },
-                 success: function (oResponse) {
-                     var sBody = oResponse.insult;
-                     sap.m.URLHelper.triggerEmail(sEmail, sSubject, sBody);
-                 }
-             })
+                var oEmployee = oEvent.getSource().getBindingContext().getObject();
+                var sEmail = oEmployee.FirstName + "." + oEmployee.LastName + "@company.com";
+                var sSubject = "Horrible job!";
+                $.ajax({
+                    url: "/generate_insult.php",
+                    data: {
+                        lang: "en",
+                        type: "json"
+                    },
+                    success: function (oResponse) {
+                        var sBody = oResponse.insult;
+                        sap.m.URLHelper.triggerEmail(sEmail, sSubject, sBody);
+                    }
+                })
             }
 
-            // onFire: function (oEvent) {
-            //     var oModel = new sap.ui.model.json.JSONModel();
-            //     oModel.loadData("evil/generate_insult.php",
-            //     {lang: "en",
-            //     type: "json"}).then(function () {
-            //         var sBody = oModel.getData().insult;
-            //         sap.m.URLHelper.triggerEmail(sEmail, sSubject, sBody);
-            //     })
-            // }
-            
         });
     });
