@@ -1,6 +1,6 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:form="sap.ui.layout.form" controllerName="stk.starterkit.controller.EmployeePerformance" displayBlock="true">
     <Page xmlns:cd="https://schemas.sap.com/sapuit/extension/sap.ui.core.CustomData/1" id="performance" title="Performance">
-        <Table id="tablePerformance" items="{path: '/Employees', expand: 'Orders'}">
+        <Table id="tablePerformance" items="{path: '/Employees', parameters: {expand: 'Orders', $count: true }}">
             <columns>
                 <Column id="Column1">
                     <Label id="label1" text="{i18n>name}" />
@@ -19,7 +19,7 @@
                 <ColumnListItem id="columnlistitem2">
                     <Text id="text1" text="{FirstName} {LastName}" />
                     <Text id="text2" text="{Title}" />
-                    <Text id="text3" text="{${Orders}}" />
+                    <Text id="text3" text="{= ${Orders}.length }" />
                     <FlexBox id="twoButtons">
                         <Button id="motivate" text="Motivate" press="onMotivate" />
                         <Button id="fire" text="Fire" press="onFire" />
