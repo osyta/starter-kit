@@ -6,7 +6,7 @@ sap.ui.define([
 
         return Controller.extend("stk.StarterKit.controller.CreateCustomer", {
             onInit: function () {
-    
+
             },
             onCreatePress: function (oEvent) {
                 var sID = this.byId("CustomerID").getValue();

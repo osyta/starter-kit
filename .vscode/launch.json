@@ -29,34 +29,6 @@
       }
     },
     {
-      "name": "starterkit-mockserver",
-      "cwd": "${workspaceFolder}",
-      "runtimeArgs": [
-        "fiori",
-        "run"
-      ],
-      "type": "node",
-      "request": "launch",
-      "runtimeExecutable": "npx",
-      "args": [
-        "--open",
-        "test/mockServer.html",
-        "--config",
-        "ui5-mock.yaml"
-      ],
-      "windows": {
-        "runtimeExecutable": "npx.cmd"
-      },
-      "console": "internalConsole",
-      "internalConsoleOptions": "openOnSessionStart",
-      "outputCapture": "std",
-      "env": {
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/starterkit\"}",
-        "FIORI_TOOLS_BACKEND_CONFIG": "[{\"path\":\"/V2\",\"url\":\"https://services.odata.org\"}]",
-        "FIORI_TOOLS_URL_PARAMS": ""
-      }
-    },
-    {
       "name": "starterkit-unittest",
       "cwd": "${workspaceFolder}",
       "runtimeArgs": [
@@ -95,6 +67,34 @@
       "args": [
         "--open",
         "test/testsuite.qunit.html"
+      ],
+      "windows": {
+        "runtimeExecutable": "npx.cmd"
+      },
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "outputCapture": "std",
+      "env": {
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/starterkit\"}",
+        "FIORI_TOOLS_BACKEND_CONFIG": "[{\"path\":\"/V2\",\"url\":\"https://services.odata.org\"},{\"path\":\"/generate_insult.php\",\"url\":\"https://evilinsult.com\",\"destination\":\"evil\"}]",
+        "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false"
+      }
+    },
+    {
+      "name": "starterkit-config1 Mock",
+      "cwd": "${workspaceFolder}",
+      "runtimeArgs": [
+        "fiori",
+        "run"
+      ],
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npx",
+      "args": [
+        "--open",
+        "test/mockServer.html",
+        "--config",
+        "ui5-mock.yaml"
       ],
       "windows": {
         "runtimeExecutable": "npx.cmd"

@@ -10,8 +10,8 @@
                 <CarouselLayout id="carousellayout" visiblePagesCount="2" />
             </customLayout>
         </Carousel>
-                    <Button id="createCustomer" press="onCreate" text="{i18n>createCustomer}" class="sapUiMediumMarginBegin sapUiTinyMarginTopBottom" />
-                    <Button id="buttonPerformance" press="onPerformance" text="Performance" class="sapUiMediumMarginBegin sapUiTinyMarginTopBottom" />
+        <Button id="createCustomer" press="onCreate" text="{i18n>createCustomer}" class="sapUiMediumMarginBegin sapUiTinyMarginTopBottom" />
+        <Button id="buttonPerformance" press="onPerformance" text="Performance" class="sapUiMediumMarginBegin sapUiTinyMarginTopBottom" />
         <Table id="table" items="{path:'/Customers', parameters: {expand: 'Orders'}}" class="blueText darkBackground">
             <columns>
                 <Column id="Column1">

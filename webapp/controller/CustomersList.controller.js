@@ -10,25 +10,25 @@ sap.ui.define([
 
         return Controller.extend("stk.starterkit.controller.CustomersList", {
             onInit: function () {
-                
+
             },
-            handleMessageToastPress: function(oEvent) {
+            handleMessageToastPress: function (oEvent) {
                 var msg = 'This app runs with mock data';
                 MessageToast.show(msg);
             },
-            onCustomerPress: function(oEvent){
+            onCustomerPress: function (oEvent) {
                 var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
                 oRouter.navTo("CustomerDetails", {
                     CustomerID: oEvent.getSource().getBindingContext().getObject().CustomerID,
                 });
             },
-            onCreate: function(oEvent){
+            onCreate: function (oEvent) {
                 var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-                oRouter.navTo("CreateCustomer",{})
+                oRouter.navTo("CreateCustomer", {})
             },
-            onPerformance: function(oEvent) {
+            onPerformance: function (oEvent) {
                 var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-                oRouter.navTo("EmployeePerformance",{})
+                oRouter.navTo("EmployeePerformance", {})
             }
 
         });

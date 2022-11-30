@@ -7,9 +7,6 @@ sap.ui.define([
 
         return Controller.extend("stk.StarterKit.controller.EmployeePerformance", {
             onInit: function () {
-                // var oData = this.getView().getModel().getData();
-                // debugger
-                // var employeeID = this.getView().getModel("Employees").getProperty("EmployeeID");
             },
             onMotivate: function (oEvent) {
                 var oEmployee = oEvent.getSource().getBindingContext().getObject();

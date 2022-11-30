@@ -1,18 +1,17 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "../model/formatter",
-    "sap/ui/core/Fragment",
-    "sap/ui/core/routing/History"
+    "sap/ui/core/Fragment"
 ],
-    function (Controller, Formatter, Fragment, History) {
+    function (Controller, Formatter, Fragment) {
         "use strict";
 
         return Controller.extend("stk.StarterKit.controller.CustomerDetails", {
+            formatter: Formatter,
             onInit: function () {
                 var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
                 oRouter.getRoute("CustomerDetails").attachPatternMatched(this._onPatternMatched, this);
             },
-            formatter: Formatter,
             _onPatternMatched: function (oEvent) {
                 this.getView().bindElement({
                     path: "/Customers('" + oEvent.getParameter("arguments").CustomerID + "')",
@@ -44,5 +43,5 @@ sap.ui.define([
                 this.byId("contactDialog").close();
             }
 
-            });
+        });
     });

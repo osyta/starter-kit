@@ -33,10 +33,10 @@
                 </f:formContainers>
             </f:Form>
         </VBox>
-            <Panel id="panel2">
-                <FlexBox id="flexbox2" justifyContent="End" alignItems="End">
-                    <Button type="Negative" id="closeButton" text="{i18n>Close}" press=".closeDialog" />
-                </FlexBox>
-            </Panel>
+        <Panel id="panel2">
+            <FlexBox id="flexbox2" justifyContent="End" alignItems="End">
+                <Button type="Negative" id="closeButton" text="{i18n>Close}" press=".closeDialog" />
+            </FlexBox>
+        </Panel>
     </Dialog>
 </core:FragmentDefinition>
