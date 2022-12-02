@@ -1,16 +1,12 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:form="sap.ui.layout.form" controllerName="stk.starterkit.controller.CreateCustomer" displayBlock="true">
-    <Page xmlns:cd="https://schemas.sap.com/sapuit/extension/sap.ui.core.CustomData/3" id="CreateCustomer" title="{i18n>createNewCustomer}">
+    <Page xmlns:cd="https://schemas.sap.com/sapuit/extension/sap.ui.core.CustomData/3" id="CreateCustomer" title="{i18n>createNewCustomer}" showNavButton="true" navButtonPress="onNavBack">
         <form:SimpleForm layout="ResponsiveGridLayout" editable="true">
-            <Toolbar>
-                <Panel id="panel" headerText="Lower left">
-                    <FlexBox id="flexbox" justifyContent="End" alignItems="End">
-                        <Button id="button" type="Accept" press="onCreatePress" text="{i18n>create}" />
-                    </FlexBox>
-                </Panel>
-            </Toolbar>
-            <Label id="labelCustomerID" displayOnly="true" wrapping="true" text="CustomerID" />
+            <FlexBox id="flexbox" justifyContent="End" alignItems="End">
+                <Button id="button" type="Accept" press="onCreatePress" text="{i18n>create}" />
+            </FlexBox>
+            <Label id="labelCustomerID" displayOnly="true" wrapping="true" text="{i18n>customerID}" />
             <Input width="70%" />
-            <Label id="labelCustomerName" displayOnly="true" wrapping="true" text="CustomerName" />
+            <Label id="labelCustomerName" displayOnly="true" wrapping="true" text="{i18n>customerName}" />
             <Input width="70%" />
         </form:SimpleForm>
     </Page>

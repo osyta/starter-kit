@@ -1,5 +1,5 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="stk.starterkit.controller.CustomerDetails" displayBlock="true">
-    <Page xmlns:cd="https://schemas.sap.com/sapuit/extension/sap.ui.core.CustomData/1" id="CustomerDetails" title="{CompanyName}">
+    <Page xmlns:cd="https://schemas.sap.com/sapuit/extension/sap.ui.core.CustomData/1" id="CustomerDetails" title="{CompanyName}" showNavButton="true" navButtonPress="onNavBack">
         <Panel id="panel">
             <FlexBox id="flexbox" justifyContent="End" alignItems="End">
                 <Button id="dialogButton" text="{i18n>contactInfoDetails}" press=".onOpenDialog" />

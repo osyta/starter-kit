@@ -1,9 +1,10 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "../model/formatter",
-    "sap/ui/core/Fragment"
+    "sap/ui/core/Fragment",
+    "sap/ui/core/routing/History"
 ],
-    function (Controller, Formatter, Fragment) {
+    function (Controller, Formatter, Fragment, History) {
         "use strict";
 
         return Controller.extend("stk.StarterKit.controller.CustomerDetails", {
@@ -41,6 +42,19 @@ sap.ui.define([
 
             closeDialog: function () {
                 this.byId("contactDialog").close();
+            },
+
+            onNavBack: function () {
+                var oHistory, sPreviousHash;
+
+                oHistory = History.getInstance();
+                sPreviousHash = oHistory.getPreviousHash();
+
+                if (sPreviousHash !== undefined) {
+                    window.history.go(-1);
+                } else {
+                    this.getRouter().navTo("appHome", {}, true /*no history*/);
+                }
             }
 
         });
