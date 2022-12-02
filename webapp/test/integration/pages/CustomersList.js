@@ -29,8 +29,8 @@ sap.ui.define([
                         viewName: sViewName,
                         success: function () {
                             Opa5.assert.ok(true, "The carousel is displayed");
-                            errorMessage: "Did not find the carousel"
-                        }
+                        },
+                        errorMessage: "Did not find the carousel"
                     });
                 },
                 iShouldSeeTheTable: function () {

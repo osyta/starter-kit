@@ -1,6 +1,6 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:form="sap.ui.layout.form" controllerName="stk.starterkit.controller.EmployeePerformance" displayBlock="true">
-    <Page xmlns:cd="https://schemas.sap.com/sapuit/extension/sap.ui.core.CustomData/1" id="performance" title="Performance">
-        <Table id="tablePerformance" items="{path: '/Employees', parameters: {expand: 'Orders', $count: true }}">
+    <Page xmlns:cd="https://schemas.sap.com/sapuit/extension/sap.ui.core.CustomData/1" id="performance" title="{i18n>employeePerformance}">
+        <Table id="tablePerformance" items="{path: '/Employees', parameters: {expand: 'Orders'}}">
             <columns>
                 <Column id="Column1">
                     <Label id="label1" text="{i18n>name}" />

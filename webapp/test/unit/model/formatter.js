@@ -18,7 +18,7 @@ sap.ui.define([
         nameFormattingTest.call(this, {
             assert: assert,
             firstName: "Oliwia",
-            lastName: "Syta",
+            lastName: "Syta-Bunia",
             expected: "O. Syta"
         });
     });

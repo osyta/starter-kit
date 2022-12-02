@@ -1,5 +1,5 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
-    <Dialog id="contactDialog" title="Contact Information">
+    <Dialog id="contactDialog" title="{i18n>contactDetails}">
         <VBox class="sapUiSmallMargin">
             <f:Form id="form" editable="false">
                 <f:layout>
@@ -8,22 +8,22 @@
                 <f:formContainers>
                     <f:FormContainer>
                         <f:formElements>
-                            <f:FormElement label="Name">
+                            <f:FormElement label="{i18n>name}">
                                 <f:fields>
                                     <Text id="nameText" text="{CompanyName}" />
                                 </f:fields>
                             </f:FormElement>
-                            <f:FormElement label="Contact Title">
+                            <f:FormElement label="{i18n>contactTitle}">
                                 <f:fields>
                                     <Text id="contactTitleText" text="{ContactTitle}" />
                                 </f:fields>
                             </f:FormElement>
-                            <f:FormElement label="Address">
+                            <f:FormElement label="{i18n>address}">
                                 <f:fields>
                                     <Text id="addressText" text="{Address}" />
                                 </f:fields>
                             </f:FormElement>
-                            <f:FormElement label="Phone">
+                            <f:FormElement label="{i18n>phone}">
                                 <f:fields>
                                     <Text id="phoneText" text="{Phone}" />
                                 </f:fields>
@@ -35,7 +35,7 @@
         </VBox>
         <Panel id="panel2">
             <FlexBox id="flexbox2" justifyContent="End" alignItems="End">
-                <Button type="Negative" id="closeButton" text="{i18n>Close}" press=".closeDialog" />
+                <Button type="Negative" id="closeButton" text="{i18n>close}" press=".closeDialog" />
             </FlexBox>
         </Panel>
     </Dialog>

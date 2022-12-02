@@ -1,5 +1,5 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="stk.starterkit.controller.CustomersList" displayBlock="true">
-    <Page xmlns:cd="https://schemas.sap.com/sapuit/extension/sap.ui.core.CustomData/2" id="CustomersList" title="CompanyName">
+    <Page xmlns:cd="https://schemas.sap.com/sapuit/extension/sap.ui.core.CustomData/2" id="CustomersList" title="{i18n>title}">
         <Carousel id="customersCarousel" class="pinkBackground">
             <pages>
                 <Image id="bunny1" width="60%" height="40%" src="https://cdn.pixabay.com/photo/2020/02/29/18/59/rabbit-4890861_1280.jpg" />
@@ -11,8 +11,8 @@
             </customLayout>
         </Carousel>
         <Button id="createCustomer" press="onCreate" text="{i18n>createCustomer}" class="sapUiMediumMarginBegin sapUiTinyMarginTopBottom" />
-        <Button id="buttonPerformance" press="onPerformance" text="Performance" class="sapUiMediumMarginBegin sapUiTinyMarginTopBottom" />
-        <Table id="table" items="{path:'/Customers', parameters: {expand: 'Orders'}}" class="blueText darkBackground">
+        <Button id="buttonPerformance" press="onPerformance" text="{i18n>performance}" class="sapUiMediumMarginBegin sapUiTinyMarginTopBottom" />
+        <Table id="table" items="{path:'/Customers', parameters: {select: 'CustomerID, CompanyName, Country'}}" class="blueText darkBackground">
             <columns>
                 <Column id="Column1">
                     <Label id="label1" text="{i18n>companyName}" />

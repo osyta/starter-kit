@@ -15,7 +15,7 @@ sap.ui.define([
 		init: function() {
 			// create
 			var oMockServer = new MockServer({
-				rootUri: "/"
+				rootUri: "/V2/Northwind/Northwind.svc/"
 			});
 
 			// simulate against the metadata and mock data
